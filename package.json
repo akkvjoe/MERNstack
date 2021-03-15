@@ -1,10 +1,12 @@
 {
-  "name": "mernstack",
+  "name": "todo",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node index.js",
+    "start-watch": "nodemon index.js",
+    "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\""
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akkvjoe/MERNstack.git"
@@ -16,13 +18,14 @@
   },
   "homepage": "https://github.com/akkvjoe/MERNstack#readme",
   "keywords": [],
-  "description": "",
+  "description": "building todo app using mongodb, express, react and nodejs",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.0"
   },
   "devDependencies": {
-    "concurrently": "^6.0.0"
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
   }
 }
